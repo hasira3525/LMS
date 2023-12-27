@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="dde29c2f-7c12-4858-ab41-3b068331e26c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     *
+FROM
+     issue]]>
+	</queryString>
+	<field name="bookID" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="studentID" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="issueDate" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dueDate" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="returnBook" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="89" splitType="Stretch">
+			<staticText>
+				<reportElement x="136" y="13" width="284" height="66" uuid="a6c32094-cffe-4bcb-80ef-a1cba4978591"/>
+				<textElement textAlignment="Center">
+					<font fontName="Bell MT" size="28" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Issue and Return Books Report]]></text>
+			</staticText>
+			<image>
+				<reportElement x="74" y="13" width="62" height="54" uuid="5bddd2b0-50a3-4ed9-8deb-30d0a11cc27f"/>
+				<imageExpression><![CDATA["C:\\Users\\Hasira Methnuka\\OneDrive\\Desktop\\EAD Project\\Icon\\[removal.ai]_tmp-62b4065b58ca5.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="420" y="13" width="62" height="54" uuid="76661c85-f9b0-4a27-be69-6cd379b4531f"/>
+				<imageExpression><![CDATA["C:\\Users\\Hasira Methnuka\\OneDrive\\Desktop\\EAD Project\\Icon\\[removal.ai]_tmp-62b4065b58ca5 - Copy.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="29" width="100" height="32" uuid="2583839d-e8ce-4ad6-b12c-34f890c590d9"/>
+				<textElement>
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Book ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="112" y="29" width="100" height="32" uuid="c1607496-fb2d-4046-b608-71c759c1c132"/>
+				<textElement>
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="225" y="29" width="100" height="32" uuid="5d2e65bb-91b7-4bcb-9631-f80c8b553d1a"/>
+				<textElement>
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Issue Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="341" y="29" width="100" height="32" uuid="9891f3dd-8855-4cd0-baf8-942872cc2cf0"/>
+				<textElement>
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Due Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="29" width="100" height="32" uuid="787b9d06-f0a8-4d20-90ef-bb508ffcef4f"/>
+				<textElement>
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Return Book]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="2c84ecd7-26dd-4bbd-8962-db0839137f89"/>
+				<textFieldExpression><![CDATA[$F{bookID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="112" y="0" width="100" height="20" uuid="8873f726-a2b0-43b6-80a0-083a8d9075d2"/>
+				<textFieldExpression><![CDATA[$F{studentID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="225" y="0" width="100" height="20" uuid="f3e9c225-be90-4618-818e-b6870958b844"/>
+				<textFieldExpression><![CDATA[$F{issueDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="341" y="0" width="100" height="20" uuid="785a575f-e392-4449-b23f-9d7e715d1466"/>
+				<textFieldExpression><![CDATA[$F{dueDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="0" width="100" height="20" uuid="42e5a9f4-1a5e-4495-bccd-b67d9ce3c6c2"/>
+				<textFieldExpression><![CDATA[$F{returnBook}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="5" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="4" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
